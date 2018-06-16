@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>My gallery</title>
+    <link th:href="@{../css/style.css}" href="../static/css/style.css"
+      rel="stylesheet" type="text/css" media="screen"/>
+     <script th:src="@{../js/jquery.js}" src="../static/js/jquery.js"></script> 
+     <script th:src="@{../js/gallery_show.js}" src="../static/js/gallery_show.js"></script> 
+</head>
+<body>
+<center><h1>My gallery</h1>
+    <div id="output"> <button id="prev" type="button">Poprzedni obrazek</button><a id="img_link" href="#" target="_blank"><img id="img_border" src="#" alt="IMG" height="300" width="300"/></a><button id="next" type="button">Nastepny obrazek</button><br> <div id="signature"></div></div>
+</center>
+<a  th:href="@{/gallery/panel}">Panel admina</a>
+</body>
+</html>

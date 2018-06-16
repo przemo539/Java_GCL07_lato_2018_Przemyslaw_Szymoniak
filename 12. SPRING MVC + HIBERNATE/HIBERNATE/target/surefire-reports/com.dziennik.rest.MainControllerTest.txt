@@ -1,0 +1,46 @@
+-------------------------------------------------------------------------------
+Test set: com.dziennik.rest.MainControllerTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 2.995 s <<< FAILURE! - in com.dziennik.rest.MainControllerTest
+addUserMissingData(com.dziennik.rest.MainControllerTest)  Time elapsed: 0.827 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template "student/all", template might not exist or might not be accessible by any of the configured Template Resolvers
+	at com.dziennik.rest.MainControllerTest.tearDown(MainControllerTest.java:44)
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template "student/all", template might not exist or might not be accessible by any of the configured Template Resolvers
+	at com.dziennik.rest.MainControllerTest.tearDown(MainControllerTest.java:44)
+
+addUserDuplicate(com.dziennik.rest.MainControllerTest)  Time elapsed: 0.218 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template "student/all", template might not exist or might not be accessible by any of the configured Template Resolvers
+	at com.dziennik.rest.MainControllerTest.tearDown(MainControllerTest.java:44)
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template "student/all", template might not exist or might not be accessible by any of the configured Template Resolvers
+	at com.dziennik.rest.MainControllerTest.tearDown(MainControllerTest.java:44)
+
+addUser(com.dziennik.rest.MainControllerTest)  Time elapsed: 0.203 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template "student/all", template might not exist or might not be accessible by any of the configured Template Resolvers
+	at com.dziennik.rest.MainControllerTest.tearDown(MainControllerTest.java:44)
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template "student/all", template might not exist or might not be accessible by any of the configured Template Resolvers
+	at com.dziennik.rest.MainControllerTest.tearDown(MainControllerTest.java:44)
+
+getUser(com.dziennik.rest.MainControllerTest)  Time elapsed: 0.062 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template "student/adle", template might not exist or might not be accessible by any of the configured Template Resolvers
+	at com.dziennik.rest.MainControllerTest.getUser(MainControllerTest.java:81)
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template "student/adle", template might not exist or might not be accessible by any of the configured Template Resolvers
+	at com.dziennik.rest.MainControllerTest.getUser(MainControllerTest.java:81)
+
+getUser(com.dziennik.rest.MainControllerTest)  Time elapsed: 0.062 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template "student/all", template might not exist or might not be accessible by any of the configured Template Resolvers
+	at com.dziennik.rest.MainControllerTest.tearDown(MainControllerTest.java:44)
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template "student/all", template might not exist or might not be accessible by any of the configured Template Resolvers
+	at com.dziennik.rest.MainControllerTest.tearDown(MainControllerTest.java:44)
+
+addUserToUserGroup(com.dziennik.rest.MainControllerTest)  Time elapsed: 0.25 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template "class/ugTest/add/adle", template might not exist or might not be accessible by any of the configured Template Resolvers
+	at com.dziennik.rest.MainControllerTest.addUserToUserGroup(MainControllerTest.java:103)
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template "class/ugTest/add/adle", template might not exist or might not be accessible by any of the configured Template Resolvers
+	at com.dziennik.rest.MainControllerTest.addUserToUserGroup(MainControllerTest.java:103)
+
+addUserToUserGroup(com.dziennik.rest.MainControllerTest)  Time elapsed: 0.25 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template "student/all", template might not exist or might not be accessible by any of the configured Template Resolvers
+	at com.dziennik.rest.MainControllerTest.tearDown(MainControllerTest.java:44)
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template "student/all", template might not exist or might not be accessible by any of the configured Template Resolvers
+	at com.dziennik.rest.MainControllerTest.tearDown(MainControllerTest.java:44)
+

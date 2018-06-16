@@ -1,0 +1,8 @@
+com\mycompany\springapp\MyController.class
+com\mycompany\springapp\User.class
+com\mycompany\springapp\AdminController.class
+com\mycompany\springapp\WebSecurityConfig.class
+com\mycompany\springapp\fileList.class
+com\mycompany\springapp\appProperty.class
+com\mycompany\springapp\SpringController.class
+com\mycompany\springapp\galleryController.class

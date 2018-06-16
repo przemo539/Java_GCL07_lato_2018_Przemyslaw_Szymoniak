@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Panel</title>
+    <link th:href="@{../css/style_panel.css}" href="../static/css/style_panel.css"
+      rel="stylesheet" type="text/css" media="screen"/>
+     <script th:src="@{../js/jquery.js}" src="../static/js/jquery.js"></script> 
+     <script th:src="@{../js/panel_show.js}" src="../static/js/gallery_show.js"></script> 
+</head>
+<body>
+<center><h1>Admin Panel</h1>
+    <div id="output"> <button id="prev" type="button">Poprzedni obrazek</button><a id="img_link" href="#" target="_blank"><img id="img_border" src="#" alt="IMG" height="300" width="300" border="1" style="min-width: 300px;min-height: 300px;"/></a><button id="next" type="button">Nastepny obrazek</button><br> <div id="signature"></div><button id="delete" type="button">Usun obrazek</button></div>
+    
+    <span sec:authorize="isAuthenticated()">
+                | Logged user: <span sec:authentication="name"></span> |
+                Roles: <span sec:authentication="principal.authorities"></span> |
+                       <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+                <!-- Upload file form -->
+<form id="upload-file-form">
+  <label for="upload-file-input">Upload your file:</label>
+  <input id="upload-file-input" type="file" name="uploadfile" accept="*" />
+</form>
+            </span>
+</center>
+</body>
+</html>

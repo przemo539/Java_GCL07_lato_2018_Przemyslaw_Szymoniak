@@ -1,0 +1,8 @@
+com\dziennik\entity\Students.class
+com\dziennik\controller\StudentController.class
+com\dziennik\dao\AbstractDAO.class
+com\dziennik\dao\ClassesDAO.class
+com\dziennik\entity\Classes.class
+com\dziennik\dao\StudentsDAO.class
+com\dziennik\rest\MainController.class
+com\dziennik\HibernateApplication.class

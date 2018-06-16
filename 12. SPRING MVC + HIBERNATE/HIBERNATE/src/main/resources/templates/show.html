@@ -1,0 +1,107 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    function delete_all_students(){
+            
+                $.ajax({
+            url: 'http://localhost:8080/student/all',
+            type: 'DELETE'
+            }); 
+    
+    }
+    function delete_student(name){
+            
+                $.ajax({
+            url: 'http://localhost:8080/student/'+name,
+            type: 'DELETE'
+            }); 
+    
+    }
+    function delete_class(name){
+            
+                $.ajax({
+            url: 'http://localhost:8080/class/'+name,
+            type: 'DELETE'
+            }); 
+    
+    }
+    
+    function delete_all_classes(){
+           
+                $.ajax({
+            url: 'http://localhost:8080/class/all',
+            type: 'DELETE'        
+            }); 
+    
+    }
+    function delete_student_from_class(){
+        var clas = document.getElementById("clas").value;
+        var login = document.getElementById("login").value;
+        if(login && clas){
+            $.ajax({
+                url: 'http://localhost:8080/class/'+clas+'/remove/'+login,
+                type: 'POST'        
+                }); 
+        }
+    }
+    function add_student_from_class(){
+        var clas = document.getElementById("clas_dod").value;
+        var login = document.getElementById("login_dod").value;
+        if(login && clas){
+            $.ajax({
+                url: 'http://localhost:8080/class/'+clas+'/add/'+login,
+                type: 'POST'        
+                }); 
+        }
+    }
+        </script>
+
+    <title>Pokaz</title>
+</head>
+<body>
+    
+    <table>
+        <tr><td><td colspan="8"><b>Studenci:</b></td></tr>
+    <tr th:each="Student : ${listStud}">
+        <td><b>Id studenta:</b></td>
+        <td th:text="${Student.student_id}">1</td>
+        <td><b>Login:</b></td>
+        <td th:text="${Student.login}"></td>
+        <td><b>Email:</b></td>
+        <td th:text="${Student.email}">Text ...</td>
+        <td><button th:onclick="'javascript:delete_student(\''+ ${Student.login} +'\');'" type="button">Usun studenta</button></td>
+        <td><a th:href="@{'/student/' + ${Student.login}+'/classes'}" target="_blank">Pokaz klase</a></td>
+    </tr>
+    </table>
+    <hr>
+    <table>
+        <tr> <td><td colspan="5"><b>Klasy:</b></td></tr>
+        <tr th:each="Class : ${listClass}">
+            <td><b>Id klasy:</b></td>
+        <td th:text="${Class.classes_id}">1</td>
+        <td><b>Nazwa klasy:</b></td>
+        <td th:text="${Class.name}"></td>
+        <td><button th:onclick="'javascript:delete_class(\''+ ${Class.name} +'\');'" type="button">Usun Klase</button></td>
+        </tr>
+    </table>
+     <hr>
+     <button onclick="delete_all_students()" type="button">Usun wszystkich studentow</button>
+     <button onclick="delete_all_classes()" type="button">Usun wszystkie klasy</button>
+     <form action="#">
+         Usun studenta z klasy:
+         Login studenta:<input id="login" />
+         Nazwa klasy: <input id="clas" />
+         <button onclick="delete_student_from_class()">Usun studenta z klasy</button>
+     </form>
+          <form action="#">
+         Dodaj studenta do klasy:
+         Login studenta:<input id="login_dod" />
+         Nazwa klasy: <input id="clas_dod" />
+         <button onclick="add_student_from_class()">Dodaj studenta</button>
+     </form>
+</body>
+</html>

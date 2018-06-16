@@ -1,0 +1,42 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dodaj</title>
+</head>
+<body>
+     <form action="/student/add" method="POST">
+        <div class="container">
+            <h1>Rejestracja studenta</h1>
+            <p>Prosze wypełnić formularz aby zarejestrować studenta</p>
+            <hr>
+            <label><b>Login</b></label>
+            <input type="text" placeholder="Enter Login" name="login" required>
+
+            <label><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="passwd" required>
+
+
+            <hr>
+            <button type="submit" >Register</button>
+       </div>
+    </form>  
+     <form action="/class/add" method="POST">
+        <div class="container">
+            <h1>Rejestracja Klasy</h1>
+            <p>Prosze wypełnić formularz aby zarejestrować Klase</p>
+            <hr>
+            <label><b>Nazwa</b></label>
+            <input type="text" placeholder="Enter Class Name" name="name" required>
+
+
+            <hr>
+            <button type="submit" >Register</button>
+       </div>
+    </form> 
+</body>
+</html>
